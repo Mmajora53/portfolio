@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maria Aydin — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <div class="container nav-container">
+      <a href="#" class="logo">Maria Aydin</a>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Hi, I'm <span class="highlight">Maria Aydin</span></h1>
+      <p>Student in Machine Learning, Computer Vision & AI.</p>
+      <a href="#projects" class="btn">View my projects</a>
+    </div>
+  </section>
+
+  <section id="about" class="container section">
+    <h2>About Me</h2>
+    <p>Specialising in computer vision and deep learning, I am pursuing a Master’s degree in Vision and Machine Intelligence (VMI) at Université Paris Cité, in Paris. I’m currently in the 2nd year of my master’s degree and seeking a 6-month internship for my last semester. My work focuses primarily on computer vision: this includes image preprocessing, image classification and segmentation, and Vision Transformers. I have also worked on audio signal processing. I am now looking for a 6-month internship in the field of computer vision with the goal of pursuing a career as a computer vision engineer and also broadening my horizons in this field.</p>
+    <div class="about-cv">
+      <a href="CV_Maria_Aydin.pdf" target="_blank" rel="noopener noreferrer" class="btn">
+        <i class="fa-solid fa-file-pdf"></i> View CV
+      </a>
+    </div>
+  </section>
+
+  <section id="projects" class="container section">
+    <h2>My Projects</h2>
+    <div class="projects-grid">
+
+      <div class="project-card" onclick="openModal('wsi')">
+        <h3>Weakly Supervised WSI Classification</h3>
+        <p>Weakly supervised pipeline for Whole Slide Image classification using DINOv2 (ViT) and DistillBERT.</p>
+        <span class="btn-more">Learn more &rarr;</span>
+      </div>
+
+      <div class="project-card" onclick="openModal('shazam')">
+        <h3>Shazam</h3>
+        <p>Hybrid music identification pipeline (ChromaDB, FAISS, SQLite, Parquet) with reranking and RIR augmentation.</p>
+        <span class="btn-more">Learn more &rarr;</span>
+      </div>
+
+      <div class="project-card" onclick="openModal('ir-engine')">
+        <h3>Information Retrieval Engine</h3>
+        <p>Hybrid search engine (BM25+ & SentenceTransformers) with Reciprocal Rank Fusion and supervised reranking.</p>
+        <span class="btn-more">Learn more &rarr;</span>
+      </div>
+
+      <div class="project-card" onclick="openModal('pieces')">
+        <h3>Coin Recognition</h3>
+        <p>Detection (Hough & Watershed) and HSV classification pipeline for Euro coin counting.</p>
+        <span class="btn-more">Learn more &rarr;</span>
+      </div>
+
+      <div class="project-card" onclick="openModal('rf-m1')">
+        <h3>Pattern Recognition Project</h3>
+        <p>Comparative study of 5 shape descriptors and evaluation of 3 classification approaches (k-NN, k-means, Ensemble).</p>
+        <span class="btn-more">Learn more &rarr;</span>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact" class="container section text-center">
+    <h2>Contact</h2>
+    <p>Find all my repositories and connect with me directly on GitHub or LinkedIn.</p>
+    <div class="contact-buttons">
+      <a href="https://github.com/Mmajora53" target="_blank" rel="noopener noreferrer" class="btn">
+        <i class="fab fa-github"></i> GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/maria-aydin-76145a353" target="_blank" rel="noopener noreferrer" class="btn btn-linkedin">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <h3 id="modal-title"></h3>
+      <p id="modal-description"></p>
+      <div id="modal-tags" class="tags"></div>
+      <a id="modal-github" href="" target="_blank" class="btn"><i class="fab fa-github"></i> View on GitHub</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
