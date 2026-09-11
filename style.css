@@ -369,3 +369,44 @@ footer p {
 .btn-linkedin:hover {
   box-shadow: 0 15px 30px -5px rgba(0, 119, 181, 0.6);
 }
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* Navigation */
+  .nav-container {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  nav ul {
+    gap: 20px;
+  }
+
+  /* Redimensionnement des sections */
+  .hero {
+    padding: 140px 0 60px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  /* Adapter la grille pour 1 colonne sur petits écrans */
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adaptation de la modale */
+  .modal-content {
+    width: 95%;
+    padding: 24px 20px;
+    max-height: 90vh;
+    overflow-y: auto; /* Permet le défilement si le texte est long */
+  }
+
+  .close-btn {
+    top: 12px;
+    right: 16px;
+  }
+}
